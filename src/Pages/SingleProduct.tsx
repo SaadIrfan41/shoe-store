@@ -1,10 +1,8 @@
 import useAxios from 'axios-hooks'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import imageNotFound from '../imageNotFound.jpg'
-import { useNavigate } from 'react-router-dom'
 
 const SingleProduct = () => {
-  const navigate = useNavigate()
   const { id } = useParams()
   const [{ data, loading, error }] = useAxios({
     url: `https://the-sneaker-database.p.rapidapi.com/sneakers/${id}`,

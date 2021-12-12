@@ -3,19 +3,6 @@ import React, { Fragment } from 'react'
 
 import { Link } from 'react-router-dom'
 import imageNotFound from '../imageNotFound.jpg'
-// import { useGetAllProductsQuery } from '../store/ProductsApi'
-
-export type productTypes = {
-  id: number
-  category: string
-  description: string
-  image: string
-  price: number
-  title: string
-  cartQuantity: number
-  cartTotalAmount: number
-  totalPrice: number
-}
 
 const Home = () => {
   const [{ data, loading, error }] = useAxios({
